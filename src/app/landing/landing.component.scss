@@ -1,0 +1,182 @@
+
+.pics{
+  width: 100%;
+  display: block;
+  height: 400px;
+}
+
+
+.choice{
+background-color: #f2f2f2;
+}
+
+.firstp{
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+text-align: center;
+padding-top: 5px;
+}
+.hd2{
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+text-align: center;
+color: skyblue;
+}
+.main-footer{
+text-align: center;
+font-size: 12px;
+}
+
+body{
+margin: 0;
+font-family: Arial, Helvetica, sans-serif;
+background: #333;
+color: #fff;
+font-size: 1.1em;
+line-height: 1.5;
+text-align: center;
+}
+img{
+display: block;
+width: 100%;
+height: auto;
+}
+h1, h2, h3{
+margin: 0;
+padding: 1em 0;
+}
+p{
+margin: 0;
+padding: 1em 0;
+}
+#section-a{
+background: #eaeaea;
+color: #333;
+padding-bottom: 2em;
+
+}
+#section-a .content-wrap{
+padding: 0 1.5em;
+}
+#section-b{
+padding: 2em 1em 1em;
+}
+#section-b a{
+text-decoration: none;
+color: #2690d4;
+}
+#section-b ul{
+list-style: none;
+margin: 0;
+padding: 0;
+}
+#section-b li{
+margin-bottom: 1em;
+background: #fff;
+color: #333;
+}
+.card-content{
+padding: 1.5em;
+}
+#section-c{
+background: #fff;
+color: #333;
+padding: 2em;
+}
+#section-d .box{
+padding: 2em;
+color: #fff;
+}
+#section-d .box:first-child{
+background: #2690d4;
+}
+#main-footer{
+padding: 2em;
+background: #000;
+color: #fff;
+text-align: center;
+}
+#main-footer a{
+color: #2690d4;
+text-decoration: none;
+}
+.card-title{
+  color: #2690d4;
+
+}
+
+@media(min-width:700px){
+.grid{
+  display: grid;
+  grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
+}
+
+#section-a .content-text{
+  columns: 2;
+  column-gap: 2em;
+}
+#section-c .content-text{
+  columns: 2;
+}
+#section-a .content-text p{
+  padding-top: 0;
+}
+#section-c .matIcon{
+  font-size: 24px;
+}
+
+.content-wrap,
+#section-b ul{
+  grid-column: 2/4;
+}
+.box, #main-footer div{
+  grid-column: span 2;
+}
+#section-b ul{
+  display: flex;
+  justify-content: space-around;
+
+}
+#section-b li{
+  width: 31%;
+ }
+}
+.content-title{
+  font-family: cursive;
+  color: #2690d4;
+
+}
+
+@media (max-width: 900px){
+.container{
+  margin: 0;
+  padding: 10px;
+  width: 100%
+}
+.column{
+  width: 100%;
+  display: block;
+  margin: 10px;
+  border: none;
+  box-sizing: border-box;
+}
+.row{
+  margin: 0
+}
+}
+
+
+
+/*.Infobox{
+
+    min-height: 550px;
+    height: 80vh;
+
+    .Infotext{
+    margin: 0;
+      width: 70%;
+      font-size: calc(2vw + 18px);
+      color: white;
+      font-weight: 700;
+      text-shadow: 1px 1px 40px rgba(22, 23, 31, 0.4);
+        
+    }  
+}*/

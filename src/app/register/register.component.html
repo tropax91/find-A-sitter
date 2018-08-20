@@ -1,0 +1,128 @@
+<!-- <mat-radio-group>
+  <input type="radio" value='sitter' [(ngModel)]='registrant'>Babysitter
+  <input type="radio" value='baby'[(ngModel)]='registrant'>Baby<br/>
+</mat-radio-group> -->
+<link href="//cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<div class="container">
+   <h3 class="mainhead">Please Register as one of the following:</h3>
+  <mat-radio-group [(ngModel)]='registrant'>
+    <div class="radioBtns">
+      <mat-radio-button color="primary" class="example-radio-button" id="radio-sitter" value='sitter'>Babysitter</mat-radio-button>
+      <mat-radio-button color="primary" class="example-radio-button" id="radio-baby" value='baby'>Baby</mat-radio-button>
+    </div>
+  </mat-radio-group>
+
+  <form novalidate [formGroup]="registerBabyForm" (submit)="onSubmit(registerBabyForm)">
+    <div class="inputFieldsDiv" *ngIf="registrant == 'baby'">
+      <h3>Register A Baby</h3>
+      <hr>
+      <br>
+      <div class="example-form">
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Firstname" id="firstname" formControlName="firstname" >
+          <mat-icon matSuffix> assignment </mat-icon>
+          <mat-error *ngIf="registerBabyForm.controls.firstname.errors?.required && registerBabyForm.controls.firstname.touched">
+              Please fill out the firstname
+          </mat-error>
+
+          <mat-error *ngIf="registerBabyForm.controls.firstname.errors?.minLength && registerBabyForm.controls.firstname.touched">
+            Firstname must be at least 3 characters
+        </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Age" id="age" formControlName="age" required>
+          <mat-icon matSuffix>filter_9_plus</mat-icon>
+          <mat-error *ngIf="registerBabyForm.controls.age.errors?.required && registerBabyForm.controls.age.touched">
+              Please enter your age
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Postal Code" id="postalCode" type="text" formControlName="postalCode" required>
+          <mat-icon matSuffix>location_on</mat-icon>
+         <!-- <mat-error *ngIf="registerBabyForm.controls.postalCode.errors?.required && registerBabyForm.controls.postalCode.touched">
+              postalCode is required
+          </mat-error>-->
+        </mat-form-field>
+
+        <!-- <mat-form-field class="example-full-width">
+          <input matInput placeholder="Gender" id="gender" formControlName="gender" required>
+        </mat-form-field> -->
+        
+        <mat-form-field class="example-full-width">
+          <mat-select placeholder="Gender" [(ngModel)]="selectedValue" formControlName="gender" name="gender" id="select-genders">
+              <!--<mat-icon matSuffix>wc</mat-icon>-->
+             <!-- <mat-error *ngIf="registerBabyForm.controls.gender.errors?.required && registerBabyForm.controls.gender.touched">
+                  You must be a dude or a gal
+              </mat-error>-->
+            <mat-option *ngFor="let gender of genders" [value]="gender.value">
+              {{gender.value}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>   
+
+      </div>
+      <br>
+
+      <mat-spinner class="spinner" diameter="30" *ngIf="spinner == true"></mat-spinner>
+      <button mat-raised-button color="primary" type="submit" id="createBaby">Register</button>
+    </div>
+  </form>
+
+  <form novalidate [formGroup]="registerSitterForm" (submit)="onSubmit(registerSitterForm)">
+    <div class="inputFieldsDiv" *ngIf="registrant == 'sitter'">
+      <h3>Register A Sitter</h3>
+      <hr>
+      <br>
+      <div class="example-form">
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Firstname" id="firstname" formControlName="firstname" required>
+          <mat-icon matSuffix>assignment</mat-icon>
+
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Lastname" id="lastname" formControlName="lastname" required>
+          <mat-icon matSuffix>assignment</mat-icon>
+
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Age" id="age" formControlName="age" required>
+          <mat-icon matSuffix>filter_9_plus</mat-icon>
+
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-select placeholder="Gender" [(ngModel)]="selectedValue" formControlName="gender" name="gender">
+              <mat-icon matSuffix>wc</mat-icon>
+
+            <mat-option *ngFor="let gender of genders" [value]="gender.value">
+              {{gender.value}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>  
+
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Region" id="region" formControlName="region" required>
+          <mat-icon matSuffix>location_on</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Years of experience" id="yearsOfExperience" formControlName="yearsOfExperience" required>
+          <mat-icon matSuffix>star_rate</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Phone" id="phone" formControlName="phone" required>
+          <mat-icon matSuffix>phone</mat-icon>
+        </mat-form-field>
+
+      </div>
+      <br>
+
+      <mat-spinner class="spinner" diameter="30" *ngIf="spinner == true"></mat-spinner>
+      <button mat-raised-button color="primary" type="submit" id="createSitter">Register</button>
+    </div>
+  </form>
+</div>

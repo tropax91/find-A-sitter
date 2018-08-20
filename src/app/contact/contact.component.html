@@ -1,0 +1,41 @@
+<div class="container">
+  <div style="text-align:center">
+    <h2>Contact Us</h2>
+    <p>Swing by for a cup of coffee, or leave us a message:</p>
+  </div>
+  <div class="row">
+   
+    <div class="column">
+      <form action="/action_page.php">
+        <input type="text" id="fname" name="name" placeholder="Name*">
+
+        <input type="text" id="lname" name="lastname" placeholder="Last Name">
+        <input type="text" id="email" name="email" placeholder="Email*">
+
+
+        <select id="topic" name="country">
+          <option value="general">Topic*</option>
+          <option value="general">General Question</option>
+          <option value="hire">Looking to Hire</option>
+          <option value="company">Company</option>
+          <option value="business">Business</option>
+       </select>
+
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:100px"></textarea>
+        <p class="req">*Required Fields</p>
+
+        <button mat-raised-button color="primary" id="e2e-submit" type="submit">Submit</button>
+      </form>
+    </div>
+
+
+  </div>
+</div>
+
+
+
+<nav>
+  <!-- Activate the child routes -->
+</nav>
+
+<router-outlet></router-outlet>

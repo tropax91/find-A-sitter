@@ -1,0 +1,55 @@
+mat-card {
+    max-width: 250px;
+    height: 400px;
+    margin: 6px;
+}
+
+.mat-card-actions{
+    .mat-button {
+        margin: 0 0;
+    }
+}
+
+.matInput {
+    width: 300px;
+}
+
+button {
+    margin: 0 0px;
+}
+
+#card-container{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+mat-spinner {
+    left: 47%;
+    margin-top: 13%;
+}
+
+.search-box {
+    width: 100%;
+    // left: 40%;
+    // padding-bottom: 40px;
+}
+
+.avatar-image {
+    background-image: url("https://www.femina.dk/sites/femina.dk/files/media/article/tigerspring_baby.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: 80%
+}
+
+
+.sitter-image { 
+    background-image: url('http://s3.amazonaws.com/37assets/svn/765-default-avatar.png'); 
+    background-size: cover; 
+    width: 40px; 
+}
+
+.baby-image { 
+    background-image: url('https://st2.depositphotos.com/4111759/12123/v/950/depositphotos_121231642-stock-illustration-baby-default-placeholder-children-avatar.jpg'); 
+    background-size: cover; 
+    width: 40px; 
+}

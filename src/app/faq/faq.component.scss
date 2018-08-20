@@ -1,0 +1,36 @@
+.pics{
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .container{
+    width: 80%;
+    height: 500px;
+    margin: auto;  
+    background-color: rgb(227, 229, 230);
+    padding-top: 10px
+  }
+.sub-head{
+  text-align: center;
+  padding: 10px;
+}
+a{
+  text-decoration: none;
+  padding: 10px;
+  color: rgb(0, 0, 0);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+a:hover{
+  color: green;
+}
+p{
+  padding-left: 15px;
+  color: rgb(138, 131, 240);
+}
+.mida{
+  color: black;
+}
+.mida:hover{
+  color: green
+}
